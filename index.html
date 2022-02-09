@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Checker</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <form action="" class="form">
+
+    <span class="logo"><i class="fa-solid fa-fingerprint"></i></span>
+
+    <h2>Registration</h2>
+
+    <div class="box pseudo-container">
+      <input type="text" autocomplete="off" id="pseudo" placeholder="Username" maxlength="28">
+      <span class="alert"></span>
+    </div>
+
+    <div class="box email-container">
+      <input type="text" autocomplete="off" id="email" placeholder="Email">
+      <span class="alert"></span>
+    </div>
+
+    <div class="box password-container">
+      <input type="password" autocomplete="off" id="password" placeholder="Password">
+      <span id="progress-bar"></span>
+      <span class="alert"></span>
+    </div>
+
+    <div class="box confirm-container">
+      <input type="password" autocomplete="off" id="confirm" placeholder="Confirm password">
+      <span class="alert"></span>
+    </div>
+
+    <div class="policy">
+      <input type="checkbox" id="policy-check">
+      <span class="policy-text">I accept all terms & conditions</span>
+    </div>
+
+    <input type="submit" value="Register Now" class="btn">
+
+    <span class="already-register">Already have an account ?<br><a href="#">Login now</a></span>
+
+  </form>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "js-form-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./styles/style.scss:./styles/style.css --style expanded",
+    "prefix": "postcss ./styles/style.css --use autoprefixer -d ./styles/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-BastienPruvost/js-form-checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-BastienPruvost/js-form-checker/issues"
+  },
+  "homepage": "https://github.com/Dev-BastienPruvost/js-form-checker#readme",
+  "browserslist": "defaults"
+}
