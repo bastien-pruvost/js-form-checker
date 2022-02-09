@@ -10,10 +10,15 @@ $backgroundColor: #EBEFF2;
 $ctaColor: linear-gradient(179deg, #556C80 -10%, #80A2BF 250%);
 $alertColor: rgb(167, 70, 41);
 $gradient1: linear-gradient(140deg, #556C80 -10%, #80A2BF 120%);
-$gradientProgress: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%);;
 $shadowColor: rgba(77, 77, 77, 0.2);
 $white: #ffffff;
 $grey: #aeb5bb;
+
+//Colors for progressbar
+$progress1: #791818;
+$progress2: #d49725;
+$progress3: #ddce00;
+$progress4: #107510;
 
 //Reset CSS
 *, ::before, ::after {
@@ -112,18 +117,35 @@ input[type=text]:focus, input[type=password]:focus {
   border-bottom-width: 2px;
 }
 
-#progress-bar {
-  width: 97%;
-  height: 4px;
+.progress-bar {
   margin: 0 2px;
-  background: $gradientProgress;
   border-radius: 3.5px;
-  font-size: 0.75rem;
-  color: $white;
-  text-align: center;
-  font-weight: 500;
-  opacity: 0;
+  height: 0px;
+  background: $progress1;
+  width: 0%;
+  transition: 200ms ease-in-out;
 }
+.progress-active {
+  height: 4px;
+  width: 24%;
+}
+.progress1 {
+background: $progress1;
+width: 24%;
+}
+.progress2 {
+background: $progress2;
+width: 48%;
+}
+.progress3 {
+background: $progress3;
+width: 73%;
+}
+.progress4 {
+background: $progress4;
+width: 97%;
+}
+
 
 .alert {
   font-size: 0.8rem;
