@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./styles/style.scss:./styles/style.css --style expanded",
-    "prefix": "postcss ./styles/style.css --use autoprefixer -d ./styles/prefixed/"
+    "sass": "sass --watch ./styles/style.scss:./styles/unprefixed-css/style.css --style expanded --no-source-map",
+    "prefix": "postcss ./styles/unprefixed-css/style.css --use autoprefixer -d ./styles/",
+    "autoprefix": "onchange \"./styles/unprefixed-css/style.css\" -- npm run prefix"
   },
   "repository": {
     "type": "git",

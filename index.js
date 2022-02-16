@@ -1,4 +1,4 @@
-
+const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input[type=text], input[type=password]");
 const progressBar = document.querySelector(".progress-bar");
 const passwordInput = document.getElementById("password");
@@ -124,6 +124,7 @@ const confirmChecker = function (value) {
 // Execute check functions when typing in an input
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
+
     switch (e.target.id) {
       case "pseudo":
         pseudoChecker(e.target.value);
@@ -145,3 +146,24 @@ inputs.forEach((input) => {
   });
 });
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+
+  // Sending form in an alert
+  if (pseudoOutput && emailOutput && passwordOutput && confirmOutput) {
+    const data = {
+      pseudo: pseudoOutput,
+      email: emailOutput,
+      password: passwordOutput
+    };
+    alert("You have successfully subscribed to nothing" + "\r\n" + "Pseudo: " + data.pseudo + "\r\n" + "Email: " + data.email + "\r\n" + "Password: " + data.password);
+    inputs.forEach((input) => input.value = "");
+
+    pseudoOutput = null;
+    emailOutput = null;
+    passwordOutput = null;
+    confirmOutput = null;
+    progressBar.classList.remove("progress-active");
+  }
+});

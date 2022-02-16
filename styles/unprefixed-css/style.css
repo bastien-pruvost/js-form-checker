@@ -1,42 +1,20 @@
-//Fonts
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
-$font1: "Ubuntu", sans-serif;
-
-//Colors
-$textColor: #4D6173;
-$linkColor: #7494af;
-$backgroundColor: #EBEFF2;
-$ctaColor: linear-gradient(179deg, #556C80 -10%, #80A2BF 250%);
-$alertColor: rgb(167, 70, 41);
-$gradient1: linear-gradient(140deg, #556C80 -10%, #80A2BF 120%);
-$shadowColor: rgba(77, 77, 77, 0.2);
-$white: #ffffff;
-$grey: #aeb5bb;
-
-//Colors for progressbar
-$progress1: #791818;
-$progress2: #d49725;
-$progress3: #ddce00;
-$progress4: #107510;
-
-//Reset CSS
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
   overflow: hidden;
 }
-a {
-  color: $linkColor;
-  &:hover {
-    color: darken($linkColor, 15%);
-  }
-}
 
-// Styles
+a {
+  color: #7494af;
+}
+a:hover {
+  color: #4e6e88;
+}
 
 body {
   display: flex;
@@ -44,10 +22,10 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: $backgroundColor;
-  font-family: $font1;
+  background: #EBEFF2;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
-  color: $textColor;
+  color: #4D6173;
   padding-top: 25px;
 }
 
@@ -61,9 +39,9 @@ body {
   width: 90%;
   max-height: 520px;
   max-width: 400px;
-  background: $white;
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px $shadowColor;
+  box-shadow: 0px 4px 8px rgba(77, 77, 77, 0.2);
   padding: 35px 0 20px 0;
 }
 
@@ -75,12 +53,12 @@ body {
   align-items: center;
   width: 55px;
   height: 55px;
-  border: 1.5px solid $white;
+  border: 1.5px solid #ffffff;
   border-radius: 50%;
-  background: $gradient1;
-  box-shadow: 1px 1px 3px $shadowColor, inner 1px 1px 3px $shadowColor;
+  background: linear-gradient(140deg, #556C80 -10%, #80A2BF 120%);
+  box-shadow: 1px 1px 3px rgba(77, 77, 77, 0.2), inner 1px 1px 3px rgba(77, 77, 77, 0.2);
   font-size: 1.9rem;
-  color: $white;
+  color: #ffffff;
 }
 
 h2 {
@@ -102,21 +80,21 @@ h2 {
 input[type=text], input[type=password] {
   appearance: none;
   outline: none;
-  border: 1px solid $grey;
+  border: 1px solid #aeb5bb;
   border-bottom-width: 2px;
   height: 40px;
   border-radius: 6px;
-  box-shadow: inner 2px 2px 5px $shadowColor;
+  box-shadow: inner 2px 2px 5px rgba(77, 77, 77, 0.2);
   margin-bottom: 2px;
   padding-left: 8px;
-  font-family: $font1;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   transform: translateX(0);
   z-index: 100;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  border: 1.5px solid $linkColor;
+  border: 1.5px solid #7494af;
   border-bottom-width: 2px;
 }
 
@@ -124,37 +102,41 @@ input[type=text]:focus, input[type=password]:focus {
   margin: 0 2px;
   border-radius: 3.5px;
   height: 0px;
-  background: $progress1;
+  background: #791818;
   width: 0%;
   transition: 200ms ease-in-out;
 }
+
 .progress-active {
   height: 4px;
   width: 24%;
 }
+
 .progress1 {
-background: $progress1;
-width: 24%;
-}
-.progress2 {
-background: $progress2;
-width: 48%;
-}
-.progress3 {
-background: $progress3;
-width: 73%;
-}
-.progress4 {
-background: $progress4;
-width: 97%;
+  background: #791818;
+  width: 24%;
 }
 
+.progress2 {
+  background: #d49725;
+  width: 48%;
+}
+
+.progress3 {
+  background: #ddce00;
+  width: 73%;
+}
+
+.progress4 {
+  background: #107510;
+  width: 97%;
+}
 
 .alert {
   font-size: 0.8rem;
   font-weight: 500;
   padding-left: 5px;
-  color: $alertColor;
+  color: #a74629;
   transition: 300ms ease-in-out;
   transform: translateY(-1000%);
   opacity: 0;
@@ -167,12 +149,12 @@ width: 97%;
   align-items: center;
   margin: 8px 0;
   padding-left: 2px;
-  label {
-    margin-left: 6px;
-    font-size: 0.95rem;
-    font-weight: 400;
-    user-select: none;
-  }
+}
+.policy label {
+  margin-left: 6px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  user-select: none;
 }
 
 .btn {
@@ -180,41 +162,41 @@ width: 97%;
   outline: none;
   height: 40px;
   width: 80%;
-  border: 1px solid $white;
+  border: 1px solid #ffffff;
   border-radius: 8px;
-  background: $ctaColor;
-  color: $white;
-  font-family: $font1;
+  background: linear-gradient(179deg, #556C80 -10%, #80A2BF 250%);
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   margin: 5px 0;
   cursor: pointer;
-  &:hover {
-    opacity: 0.9;
-  }
-  &:active {
-    transform: scale(0.98);
-  }
 }
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
 .already-register {
   margin-top: 8px;
   width: 80%;
   font-size: 0.95rem;
 }
 
-// Error classes for JS
-
 .error input:not(:focus) {
-  color: $alertColor;
-  border-color: $alertColor;
+  color: #a74629;
+  border-color: #a74629;
   animation: wizz 200ms linear 3;
 }
+
 .error input:not(:focus) + span {
   height: 16px;
   transform: translateY(0%);
   display: block;
   opacity: 1;
-  color: $alertColor;
+  color: #a74629;
 }
 
 @keyframes wizz {
